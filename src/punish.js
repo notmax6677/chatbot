@@ -35,6 +35,11 @@ export default function punish() {
             newResponses[cleanedStatement].push(LastResponse);
         }
 
+        // filter out duplicate responses
+        newResponses[cleanedStatement] = newResponses[cleanedStatement].filter((item, index) => 
+            newResponses[cleanedStatement].indexOf(item) === index
+        );
+
         save.pResponses(newResponses);
 
         success = 1;

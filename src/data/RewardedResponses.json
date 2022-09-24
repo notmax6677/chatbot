@@ -1,1 +1,34 @@
-{}
+{
+    "please be more clear": [
+        "how"
+    ],
+    "whats your favourite color": [
+        "blue",
+        "purple",
+        "pink",
+        "green",
+        "white",
+        "black",
+        "gold",
+        "silver",
+        "red",
+        "aqua"
+    ],
+    "what": [
+        "yup"
+    ],
+    "ok": [
+        "good"
+    ],
+    "whats your name": [
+        "george",
+        "tanisha",
+        "freya",
+        "max",
+        "luke",
+        "khian",
+        "joe",
+        "ava",
+        "keira"
+    ]
+}
