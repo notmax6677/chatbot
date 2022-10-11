@@ -36,6 +36,15 @@ const rewardCommand = "+";
 
 const exitCommand = "x";
 
+// -- debug mode ---
+const debug = true;
+
+const randomGenResponse = "Randomly Generated: ";
+
+const rewardBasedResponse = "Reward Based: ";
+
+const familiarityBasedResponse = "Familiarity Based: ";
+
 // --- actual function ---
 
 // initiate the client routine
@@ -108,10 +117,34 @@ export default async function client() {
                 // log connection
                 console.log(connection);
 
-                // tell the bot to respond to the message and log it
-                console.log(
-                    bot + chat + respond(response.statement)
-                );
+                // tell the bot to respond to the message and store the response and the response type in case you want to debug
+
+                var output = respond(response.statement); // [0] = response, [1] = response type
+
+                var givenResponse = output[0];
+
+                var responseType = output[1];
+
+                // if debug is false
+                if(!debug) {
+                    console.log(bot + chat + givenResponse);
+                }
+                else {
+                    // switch case statement to print the response type along with the output
+                    switch(responseType) {
+                        case "random":
+                            console.log(bot + chat + randomGenResponse + givenResponse);
+                            break;
+
+                        case "reward":
+                            console.log(bot + chat + rewardBasedResponse + givenResponse);
+                            break;
+
+                        case "familiar":
+                            console.log(bot + chat + familiarityBasedResponse + givenResponse);
+                            break;
+                    }
+                }
 
                 console.log(space);
 
