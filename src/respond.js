@@ -105,8 +105,8 @@ export default function respond(statement) {
     var responseType = ""; // the type of response that is given
     // ---
 
-    // if the reward response chance is less than 30%
-    if(rewardResponseChance < 0.3) {
+    // if the reward response chance is less than 40%
+    if(rewardResponseChance < 0.4) {
         // chance of getting a response from a similar statement
         var similarResponseChance = Math.random();
 
